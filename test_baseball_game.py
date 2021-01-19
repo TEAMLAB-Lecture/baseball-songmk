@@ -112,6 +112,7 @@ class TestBaseballGame(unittest.TestCase):
                 with patch('sys.stdout', new=StringIO()) as fakeOutput:
                     bg.main()
                     console = fakeOutput.getvalue().strip().split("\n")
+                    print("ok")
                     random_number = console[1][-3:].strip()
                     self.assertFalse(
                         self.is_duplicated_number(random_number))
